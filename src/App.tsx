@@ -11,7 +11,7 @@ function App() {
   const [todo, setTodo] = useState<string>("");
 
   function addTodo() {
-    if (!todo) {
+    if (!todo.trim()) {
       alert("No todo!");
       return;
     }
@@ -50,6 +50,11 @@ function App() {
           type="text"
           placeholder="Enter todo"
           onChange={(e) => setTodo(e.target.value)}
+          onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              addTodo();
+            }
+          }}
           className="focus:outline-none bg-zinc-200 text-zinc-900 rounded-lg p-2 w-full"
         />
         <button
