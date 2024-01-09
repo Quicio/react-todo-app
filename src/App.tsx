@@ -94,13 +94,13 @@ function App() {
             <button className="bg-red-500 px-4 py-2 rounded-lg" onClick={() => removeTodo(i)}><FontAwesomeIcon icon={faTrash} /></button>
           </div>
         ))}
-      </div>
       <button
-        className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4 mt-2 self-end mr-48"
+        className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4 mt-2 self-start"
         onClick={() => removeAllTodos()}
       >
-        Remove All Todos
+        Remove all todos
       </button>
+      </div>
     </div>
   );
 }
