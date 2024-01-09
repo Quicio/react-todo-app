@@ -26,6 +26,9 @@ function App() {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   }
+  function removeAllTodos() {
+    setTodos([]);
+  }
 
   function toggleTodo(index: number) {
     const newTodos = todos.map((todo, i) => {
@@ -77,6 +80,12 @@ function App() {
           </div>
         ))}
       </div>
+      <button
+        className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4 mt-4"
+        onClick={() => removeAllTodos()}
+      >
+        Remove All Todos
+      </button>
     </div>
   );
 }
