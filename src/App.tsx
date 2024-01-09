@@ -18,6 +18,7 @@ function App() {
 
     const newTodos: Todo[] = [{ content: todo, complete: false }, ...todos];
     setTodos(newTodos);
+    
   }
 
   function removeTodo(index: number) {
@@ -55,7 +56,7 @@ function App() {
           onClick={() => addTodo()}
           className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4"
         >
-          Add
+            Add
         </button>
       </div>
       <div className="todo-container flex flex-col justify-center gap-2 w-2/3">
@@ -81,7 +82,7 @@ function App() {
         ))}
       </div>
       <button
-        className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4 mt-4"
+        className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4 mt-2 self-end mr-48"
         onClick={() => removeAllTodos()}
       >
         Remove All Todos
