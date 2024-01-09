@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+input{
+    z-index: 1;
+}
+button{
+    z-index: 1;
+}
+.timeBox{
+    width: 10vw;
+}
+.todoBox{
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#editPopup{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+/* .parentDiv{
+   background-color: col or;
+} */
+.check{
+    width: 25px;
+    height: 25px;
+}
+.imgLogo{
+    width: 50px;
+    height: 50px;
+}
+.webname{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(80, 220, 255);
+    margin: 0 10px 0 5px;
+}

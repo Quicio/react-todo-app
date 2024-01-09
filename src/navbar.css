@@ -1,0 +1,22 @@
+.navBar{
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    /* width: 100vw; */
+    padding: 5px;
+
+}
+.navBox{
+    /* background-color: rgb(184, 184, 184); */
+    color: white;
+    padding: 10px;
+    /* margin: 0 0 0 2px; */
+    border-radius: 3px;
+}
+.navBox > a{
+    text-decoration: none;
+    color: white;
+}

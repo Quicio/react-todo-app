@@ -1,0 +1,44 @@
+.circle1{
+    background-color: yellow;
+    border-radius: 300px;
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    z-index: 0;
+    opacity: 20%;
+    top: 15vh;
+    left: 10vw;
+}
+.circle2{
+    background-color: red;
+    border-radius: 300px;
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    z-index: 0;
+    opacity: 20%;
+    top: 20vh;
+    left: 60vw;
+}
+.circle3{
+    background-color: white;
+    border-radius: 300px;
+    width: 17vw;
+    height: 17vw;
+    position: absolute;
+    z-index: 0;
+    opacity: 20%;
+    top: 13vh;
+    left: 7vw;
+}
+.circle4{
+    background-color: white;
+    border-radius: 300px;
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    z-index: 0;
+    opacity: 20%;
+    top: 15vh;
+    left: 60vw;
+}
