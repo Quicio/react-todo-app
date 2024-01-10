@@ -96,13 +96,13 @@ function App() {
             </button>
           </div>
         ))}
-      </div>
       <button
-        className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4 mt-2 self-end mr-48"
+        className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4 mt-2 self-start"
         onClick={() => removeAllTodos()}
       >
-        Remove All Todos
+        Remove all todos
       </button>
+<<<<<<< HEAD
       
       <div className="flex-grow"></div>
       <footer className="footer text-zinc-200 text-center p-4 bg-gray-800 w-full flex justify-center">
@@ -120,8 +120,17 @@ function App() {
           </a>
         </div>
       </footer>
+=======
+      </div>
+>>>>>>> ffea0fd968ea567134941e879731c335c2b45756
     </div>
   );
 }
 
 export default App;
+<<<<<<< HEAD
+=======
+
+
+// i have added a remove all todo button to delete all the todos. I also added font awesome for add and delete buttons.. I also implemented a feature so that  we just have to press enter after writing a todo. No need to press the + button.
+>>>>>>> ffea0fd968ea567134941e879731c335c2b45756
