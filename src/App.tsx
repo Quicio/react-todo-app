@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faSharp } from "@fortawesome/free-brands-svg-icons";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faLinkedin, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import "./index.css";
+
+library.add(faLinkedin, faInstagram, faFacebook);
 
 type Todo = {
   content: string;
@@ -22,16 +24,15 @@ function App() {
 
     const newTodos: Todo[] = [{ content: todo, complete: false }, ...todos];
     setTodos(newTodos);
-    setTodo('')
-    
+    setTodo("");
   }
 
   function removeTodo(index: number) {
-    // todos.splice(index, 1);
-    const newTodos = [ ...todos ];
+    const newTodos = [...todos];
     newTodos.splice(index, 1);
     setTodos(newTodos);
   }
+
   function removeAllTodos() {
     setTodos([]);
   }
@@ -44,13 +45,12 @@ function App() {
       return todo;
     });
 
-
     setTodos(newTodos);
   }
 
   return (
     <div className="App bg-zinc-900 min-w-screen min-h-screen flex flex-col justify-center items-center gap-4">
-      <div className="flex gap-4 w-2/3">
+      <div className="flex gap-4 w-2/3 mt-60">
         <input
           type="text"
           placeholder="Enter todo"
@@ -58,19 +58,16 @@ function App() {
           onKeyPress={(e) => {
             if (e.key === "Enter") {
               addTodo();
-              setTodo('')
+              setTodo("");
             }
-          }
-
-        }
-        
+          }}
           className="focus:outline-none bg-zinc-200 text-zinc-900 rounded-lg p-2 w-full"
         />
         <button
           onClick={() => addTodo()}
           className="bg-zinc-200 text-zinc-900 rounded-lg p-2 px-4"
         >
-             <FontAwesomeIcon icon={faPlus} />
+          <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
       <div className="todo-container flex flex-col justify-center gap-2 w-2/3">
@@ -91,7 +88,12 @@ function App() {
               </p>
             </div>
 
-            <button className="bg-red-500 px-4 py-2 rounded-lg" onClick={() => removeTodo(i)}><FontAwesomeIcon icon={faTrash} /></button>
+            <button
+              className="bg-red-500 px-4 py-2 rounded-lg"
+              onClick={() => removeTodo(i)}
+            >
+              <FontAwesomeIcon icon={faTrash} />
+            </button>
           </div>
         ))}
       </div>
@@ -101,11 +103,25 @@ function App() {
       >
         Remove All Todos
       </button>
+      
+      <div className="flex-grow"></div>
+      <footer className="footer text-zinc-200 text-center p-4 bg-gray-800 w-full flex justify-center">
+        <p className="mr-20">&copy; 2024</p>
+        <p className="mr-20">Created By: KALYANI GOVERNMENT ENGINEERING COLLEGE</p>
+        <div className="ml-4">
+          <a href="linkedin-url" target="blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fab", "linkedin"]} className="text-white mr-2" size="lg"/>
+          </a>
+          <a href="instagram-url" target="blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fab", "instagram"]} className="text-white mr-2"size="lg" />
+          </a>
+          <a href="facebook-url" target="blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={["fab", "facebook"]} className="text-white" size="lg" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
 
 export default App;
-
-
-// i have added a remove all todo button to delete all the todos. I also added font awesome for add and delete buttons.. I also implemented a feature so that  we just have to press enter after writing a todo. No need to press the + button.
