@@ -107,7 +107,7 @@ function App() {
       <div className="flex-grow"></div>
       <footer className="footer text-zinc-200 text-center p-4 bg-gray-800 w-full flex justify-center">
         <p className="mr-20">&copy; 2024</p>
-        <p className="mr-20">Created By: KALYANI GOVERNMENT ENGINEERING COLLEGE</p>
+        <p className="mr-20">Created By: Us</p>
         <div className="ml-4">
           <a href="linkedin-url" target="blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={["fab", "linkedin"]} className="text-white mr-2" size="lg"/>
